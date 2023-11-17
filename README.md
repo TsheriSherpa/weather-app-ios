@@ -3,4 +3,4 @@ This is weather app developed using swift and storyboard. The data in the app ar
 
 
 # Demo Video
-![Demo](https://user-images.githubusercontent.com/35870451/283881826-3fba90a6-bf79-42c7-8621-fb8d9c7d1ae8.mov)
+![Demo](https://user-images.githubusercontent.com/35870451/283883076-7cdbd1d0-9d46-4bed-a5b6-8468de917865.gif)
