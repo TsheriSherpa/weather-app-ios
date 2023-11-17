@@ -186,6 +186,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
    
                 self.labelTemperature.text = String(data.main.temp) + "°C"
                 self.labelWeatherInfo.text = data.weather[0].main
+                print(data.weather[0].icon)
                 self.imageWeather.image = UIImage(named: data.weather[0].icon)
                 
                 let date = Date(timeIntervalSince1970: TimeInterval(data.dt))
