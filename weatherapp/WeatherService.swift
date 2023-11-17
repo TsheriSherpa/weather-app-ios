@@ -75,7 +75,7 @@ struct WeatherResponseWrapper: Decodable {
     }
     
     struct WeatherResponse: Decodable {
-        var id: Double
+        var id: Int
         var main: String
         var description: String
         var icon: String
@@ -96,8 +96,9 @@ struct WeatherResponseWrapper: Decodable {
     }
     
     struct SysResponse: Decodable {
-        var sunrise: Int64
+        var sunrise: Int
         var country: String
+        var sunset: Int
     }
 }
 

@@ -115,14 +115,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 print("Error fetching weather: \(error)")
             }
         }
-        
-        
     }
     
-    func updateDataSource(data: WeatherResponseWrapper) {
-        self.weatherInfo.removeAll()
-        let timezone = TimeZone(secondsFromGMT: data.timezone)
-        let date = Date(timeIntervalSince1970: TimeInterval(data.sys.sunrise))
+    func getTimeFromTimestamp(timestamp: Int, secondsFromGMT: Int) -> String{
+        let timezone = TimeZone(secondsFromGMT: secondsFromGMT)
+        let date = Date(timeIntervalSince1970: TimeInterval(timestamp))
 
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "h:mm a" // "EEEE" for the day of the week, "h" for the hour, "mm" for the minutes, "a" for AM/PM
@@ -130,10 +127,17 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         dateFormatter.timeZone = timezone
 
         let dateString = dateFormatter.string(from: date)
+        return dateString
+    }
+    
+    func updateDataSource(data: WeatherResponseWrapper) {
+        self.weatherInfo.removeAll()
+        let sunrise = getTimeFromTimestamp(timestamp: data.sys.sunrise, secondsFromGMT: data.timezone)
+        let sunset = getTimeFromTimestamp(timestamp: data.sys.sunset, secondsFromGMT: data.timezone)
         
         self.weatherInfo.append([
             "label": "SUNRISE",
-            "value": dateString,
+            "value": sunrise,
             "icon": "sunrise"
         ])
         
@@ -146,19 +150,25 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         self.weatherInfo.append([
             "label": "FEELS LIKE",
             "value": String(data.main.feels_like) + "°C",
-            "icon": "sunrise"
+            "icon": "thermometer"
         ])
         
         self.weatherInfo.append([
             "label": "PRESSURE",
             "value": String(data.main.pressure),
-            "icon": "sunrise"
+            "icon": "pressure"
         ])
         
         self.weatherInfo.append([
             "label": "HUMIDITY",
             "value": String(data.main.humidity),
-            "icon": "sunrise"
+            "icon": "humidity"
+        ])
+        
+        self.weatherInfo.append([
+            "label": "SUNSET",
+            "value": sunset,
+            "icon": "sunset"
         ])
         
         DispatchQueue.main.async {
@@ -176,11 +186,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
    
                 self.labelTemperature.text = String(data.main.temp) + "°C"
                 self.labelWeatherInfo.text = data.weather[0].main
-                
-                self.updateWeatherImage(imageName: data.weather[0].icon)
+                self.imageWeather.image = UIImage(named: data.weather[0].icon)
                 
                 let date = Date(timeIntervalSince1970: TimeInterval(data.dt))
-                
                 let dateFormatter = DateFormatter()
                 let timezone = TimeZone(secondsFromGMT: data.timezone)
                 
@@ -199,6 +207,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
     }
     
+    // update weather image by fetching image from open weather api
     func updateWeatherImage(imageName: String)  {
         let imageUrlString = "https://openweathermap.org/img/wn/\(imageName)@4x.png"
         

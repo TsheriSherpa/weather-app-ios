@@ -70,9 +70,9 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q9s-qG-WAV">
-                                <rect key="frame" x="80" y="252" width="233" height="235"/>
+                                <rect key="frame" x="80" y="252" width="233" height="217"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="235" id="LRl-xc-c3Q"/>
+                                    <constraint firstAttribute="height" constant="217" id="LRl-xc-c3Q"/>
                                 </constraints>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9Zi-oi-pnf">
@@ -139,22 +139,6 @@
                                             <outlet property="labelValue" destination="c0P-fr-54M" id="XnM-KD-2k4"/>
                                         </connections>
                                     </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="uz7-GE-sXv">
-                                        <rect key="frame" x="90" y="16" width="80" height="128"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="kXC-tS-eS9">
-                                            <rect key="frame" x="0.0" y="0.0" width="80" height="128"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </collectionViewCellContentView>
-                                    </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Oay-yg-Ohc">
-                                        <rect key="frame" x="180" y="16" width="80" height="128"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4jT-l7-Suy">
-                                            <rect key="frame" x="0.0" y="0.0" width="80" height="128"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </collectionViewCellContentView>
-                                    </collectionViewCell>
                                 </cells>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="dY6-rq-JKC"/>
@@ -168,7 +152,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0xD-Pb-0XZ">
-                                <rect key="frame" x="50" y="515" width="293" height="106"/>
+                                <rect key="frame" x="50" y="495" width="293" height="106"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yci-Ec-UfM">
                                         <rect key="frame" x="80" y="0.0" width="133" height="75"/>
@@ -215,10 +199,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Q9s-qG-WAV" secondAttribute="trailing" constant="80" id="18x-bf-hSb"/>
-                            <constraint firstItem="fKC-EM-sox" firstAttribute="top" secondItem="0xD-Pb-0XZ" secondAttribute="bottom" constant="8" symbolic="YES" id="2Ap-r0-7GH"/>
+                            <constraint firstItem="fKC-EM-sox" firstAttribute="top" secondItem="0xD-Pb-0XZ" secondAttribute="bottom" constant="28" id="2Ap-r0-7GH"/>
                             <constraint firstItem="wSO-hg-Q4Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="9it-Ke-gnI"/>
                             <constraint firstItem="H6t-PR-Be8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="DXe-Yc-hvF"/>
-                            <constraint firstItem="0xD-Pb-0XZ" firstAttribute="top" secondItem="Q9s-qG-WAV" secondAttribute="bottom" constant="28" id="Gyu-6f-HOQ"/>
+                            <constraint firstItem="0xD-Pb-0XZ" firstAttribute="top" secondItem="Q9s-qG-WAV" secondAttribute="bottom" constant="26" id="Gyu-6f-HOQ"/>
                             <constraint firstItem="wSO-hg-Q4Z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IM2-8T-xZg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9Zi-oi-pnf" secondAttribute="trailing" id="NO0-3t-gYe"/>
                             <constraint firstItem="9Zi-oi-pnf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="WEa-KN-N7z"/>
@@ -261,10 +245,10 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray6Color">
-            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGrayColor">
-            <color red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
