@@ -65,8 +65,8 @@
 				11211A672B02909E005674B5 /* SceneDelegate.swift */,
 				11211A692B02909E005674B5 /* ViewController.swift */,
 				116289E12B0686AB0004F3D7 /* MyCollectionCell.swift */,
-				11211A6B2B02909E005674B5 /* Main.storyboard */,
 				11211A6E2B0290A0005674B5 /* Assets.xcassets */,
+				11211A6B2B02909E005674B5 /* Main.storyboard */,
 				11211A702B0290A0005674B5 /* LaunchScreen.storyboard */,
 				11211A732B0290A0005674B5 /* Info.plist */,
 			);

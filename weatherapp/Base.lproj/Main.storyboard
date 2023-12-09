@@ -49,13 +49,13 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8mp-ng-GcS">
                                         <rect key="frame" x="136.66666666666666" y="15" width="0.0" height="0.0"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FzS-Bh-Pv9">
                                         <rect key="frame" x="136.66666666666666" y="21" width="0.0" height="0.0"/>
-                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Oblique" family="Helvetica" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -69,8 +69,8 @@
                                     <constraint firstAttribute="height" constant="95" id="p2z-Px-J0N"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q9s-qG-WAV">
-                                <rect key="frame" x="80" y="252" width="233" height="217"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q9s-qG-WAV">
+                                <rect key="frame" x="107" y="295" width="191" height="174"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="217" id="LRl-xc-c3Q"/>
                                 </constraints>
@@ -106,15 +106,15 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="jhj" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0P-fr-54M">
                                                     <rect key="frame" x="0.0" y="87" width="80" height="18"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="CIy-8x-6rB"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="85" id="CIy-8x-6rB"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="kjk" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpX-wL-oA6">
                                                     <rect key="frame" x="0.0" y="60.999999999999993" width="80" height="24.666666666666664"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
                                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -146,13 +146,13 @@
                                 </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More Information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKC-EM-sox">
-                                <rect key="frame" x="135" y="629" width="123" height="18"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <rect key="frame" x="135.33333333333334" y="672" width="122.66666666666666" height="18"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0xD-Pb-0XZ">
-                                <rect key="frame" x="50" y="495" width="293" height="106"/>
+                                <rect key="frame" x="50" y="538" width="293" height="106"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yci-Ec-UfM">
                                         <rect key="frame" x="80" y="0.0" width="133" height="75"/>
@@ -178,7 +178,7 @@
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IrX-iV-LGt">
                                         <rect key="frame" x="146.66666666666666" y="87.333333333333371" width="0.0" height="0.0"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-BoldOblique" family="Helvetica" pointSize="17"/>
                                         <color key="textColor" systemColor="systemGrayColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -198,7 +198,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Q9s-qG-WAV" secondAttribute="trailing" constant="80" id="18x-bf-hSb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Q9s-qG-WAV" secondAttribute="trailing" constant="95" id="18x-bf-hSb"/>
                             <constraint firstItem="fKC-EM-sox" firstAttribute="top" secondItem="0xD-Pb-0XZ" secondAttribute="bottom" constant="28" id="2Ap-r0-7GH"/>
                             <constraint firstItem="wSO-hg-Q4Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="9it-Ke-gnI"/>
                             <constraint firstItem="H6t-PR-Be8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="DXe-Yc-hvF"/>
@@ -209,11 +209,11 @@
                             <constraint firstItem="wSO-hg-Q4Z" firstAttribute="top" secondItem="H6t-PR-Be8" secondAttribute="bottom" constant="30" id="c43-cb-9Sk"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0xD-Pb-0XZ" secondAttribute="trailing" constant="50" id="cp4-4H-HBa"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9Zi-oi-pnf" secondAttribute="bottom" id="cwW-4B-bIc"/>
-                            <constraint firstItem="Q9s-qG-WAV" firstAttribute="top" secondItem="wSO-hg-Q4Z" secondAttribute="bottom" constant="8" id="deT-6C-uux"/>
+                            <constraint firstItem="Q9s-qG-WAV" firstAttribute="top" secondItem="wSO-hg-Q4Z" secondAttribute="bottom" constant="51" id="deT-6C-uux"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="H6t-PR-Be8" secondAttribute="trailing" constant="10" id="eUG-Hs-Hoh"/>
                             <constraint firstItem="H6t-PR-Be8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="flc-6s-Qym"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wSO-hg-Q4Z" secondAttribute="trailing" constant="60" id="h5s-Na-E0e"/>
-                            <constraint firstItem="Q9s-qG-WAV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="oQj-OC-AHr"/>
+                            <constraint firstItem="Q9s-qG-WAV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="95" id="oQj-OC-AHr"/>
                             <constraint firstItem="0xD-Pb-0XZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="uWP-z7-eTy"/>
                             <constraint firstItem="fKC-EM-sox" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="v8D-oN-7VG"/>
                             <constraint firstItem="fKC-EM-sox" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vBL-YV-Elw"/>
@@ -245,10 +245,10 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray6Color">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGrayColor">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

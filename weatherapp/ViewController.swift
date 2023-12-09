@@ -155,13 +155,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         self.weatherInfo.append([
             "label": "PRESSURE",
-            "value": String(data.main.pressure),
+            "value": String(data.main.pressure) + "N/m2",
             "icon": "pressure"
         ])
         
         self.weatherInfo.append([
             "label": "HUMIDITY",
-            "value": String(data.main.humidity),
+            "value": String(data.main.humidity) + "%",
             "icon": "humidity"
         ])
         
