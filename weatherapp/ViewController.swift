@@ -47,7 +47,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         ]
     ]
     
-    var cities: [String] = []
+    var cities: [WeatherResponseWrapper] = []
     
     
     override func viewDidLoad() {
@@ -91,7 +91,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @objc func lableCitiesTapped() {
         print("navigating")
         // Perform navigation to the next screen
-        let nextVC = SecondViewController()
+        let nextVC = storyboard?.instantiateViewController(withIdentifier: "SecondViewController") as! SecondViewController
         nextVC.cities = self.cities
         navigationController?.pushViewController(nextVC, animated: true)
     }
@@ -203,12 +203,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     // updating ui after receiving api response
     func setUI(data: WeatherResponseWrapper) {
+        self.cities.append(data)
         DispatchQueue.global().async {
             // running task in main thread asynchronously
             DispatchQueue.main.async {
                 self.labelLocation.text = "\(data.name), \(data.sys.country)"
-                self.cities.append("\(data.name), \(data.sys.country)")
-   
                 self.labelTemperature.text = String(data.main.temp) + "°C"
                 self.labelWeatherInfo.text = data.weather[0].main
                 print(data.weather[0].icon)
