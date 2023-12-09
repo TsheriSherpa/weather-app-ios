@@ -31,6 +31,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    @IBOutlet weak var lableCities: UILabel!
+    
+    var isLoading: Bool = true;
+    
     var temperature : Double?
     
     let locationManager = CLLocationManager()
@@ -43,6 +47,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         ]
     ]
     
+    var cities: [String] = []
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -53,6 +60,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestLocation()
         
+        if (isLoading) {
+            self.labelLocation.text = "Fetching...";
+        }
+        
         // Adding tap gesture to currentLocaitonImageView
         let currentLocaitonTapGesture = UITapGestureRecognizer(target: self, action: #selector(currentLocationImageTapped))
         btnCurrentLocation.addGestureRecognizer(currentLocaitonTapGesture)
@@ -61,15 +72,28 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         // Adding tap guesture to searchImageView
         let searchTapGesture = UITapGestureRecognizer(target: self, action: #selector(searchImageTapped))
         btnSearch.addGestureRecognizer(searchTapGesture)
+        
 
         // Adding toggle change handler to switch
         btnToggleTemp.addTarget(self, action: #selector(switchValueChanged(_:)), for: .valueChanged)
+        
+        let labelTap = UITapGestureRecognizer(target: self, action: #selector(lableCitiesTapped))
+        lableCities.isUserInteractionEnabled = true
+        lableCities.addGestureRecognizer(labelTap)
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         searchImageTapped()
         return true
+    }
+    
+    @objc func lableCitiesTapped() {
+        print("navigating")
+        // Perform navigation to the next screen
+        let nextVC = SecondViewController()
+        nextVC.cities = self.cities
+        navigationController?.pushViewController(nextVC, animated: true)
     }
 
     // handling the toggle for temperature unit
@@ -183,6 +207,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             // running task in main thread asynchronously
             DispatchQueue.main.async {
                 self.labelLocation.text = "\(data.name), \(data.sys.country)"
+                self.cities.append("\(data.name), \(data.sys.country)")
    
                 self.labelTemperature.text = String(data.main.temp) + "°C"
                 self.labelWeatherInfo.text = data.weather[0].main
@@ -293,11 +318,14 @@ extension ViewController: CLLocationManagerDelegate {
             }
             
             locationManager.stopUpdatingLocation()
+            self.isLoading = false
         }
     }
     
     // implementing the on error locationManager function
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        self.isLoading = false
+        self.labelLocation.text = "Error Fetching Weather"
         print("Error getting location", error)
     }
 }

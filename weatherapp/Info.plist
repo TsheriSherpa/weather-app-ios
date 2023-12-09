@@ -6,8 +6,6 @@
 	<array>
 		<string></string>
 	</array>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Needs locaiton access for weather information</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
