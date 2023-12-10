@@ -47,14 +47,9 @@ extension SecondViewController: UITableViewDataSource, UITableViewDelegate {
         content.text = item.name
         let icon = UIImage(named: item.weather[0].icon)
         content.image = icon?.resizeImage(targetSize: CGSize(width: 80, height: 80))
-        
-        
         let farenhietTemperature = (item.main.temp * 9/5) + 32;
         let farenhietTempText = "\(String(format: "%.2f", farenhietTemperature))°F"
-        
-        
         content.secondaryText = String("\(item.main.temp)°C | \(farenhietTempText)")
-        
         cell.contentConfiguration = content
         
         return cell

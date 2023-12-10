@@ -146,7 +146,7 @@
                                 </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More Information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKC-EM-sox">
-                                <rect key="frame" x="135.33333333333334" y="681" width="122.66666666666666" height="18"/>
+                                <rect key="frame" x="135.33333333333334" y="663" width="122.66666666666666" height="18"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -205,7 +205,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Q9s-qG-WAV" secondAttribute="trailing" constant="95" id="18x-bf-hSb"/>
-                            <constraint firstItem="fKC-EM-sox" firstAttribute="top" secondItem="0xD-Pb-0XZ" secondAttribute="bottom" constant="28" id="2Ap-r0-7GH"/>
+                            <constraint firstItem="fKC-EM-sox" firstAttribute="top" secondItem="0xD-Pb-0XZ" secondAttribute="bottom" constant="10" id="2Ap-r0-7GH"/>
                             <constraint firstItem="wSO-hg-Q4Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="9it-Ke-gnI"/>
                             <constraint firstItem="H6t-PR-Be8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="DXe-Yc-hvF"/>
                             <constraint firstItem="0xD-Pb-0XZ" firstAttribute="top" secondItem="Q9s-qG-WAV" secondAttribute="bottom" constant="38" id="Gyu-6f-HOQ"/>
